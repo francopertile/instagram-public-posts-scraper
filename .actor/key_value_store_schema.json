@@ -1,0 +1,16 @@
+{
+    "actorKeyValueStoreSchemaVersion": 1,
+    "title": "Instagram Scrape Run Summary Store",
+    "description": "Stores execution state and per-account summary statistics.",
+    "collections": {
+        "summary": {
+            "title": "Run Summary & Account Tallies",
+            "description": "JSON summary containing the number of posts extracted per Instagram account and overall run status.",
+            "key": "SUMMARY",
+            "contentTypes": [
+                "application/json"
+            ]
+        }
+    }
+}
+

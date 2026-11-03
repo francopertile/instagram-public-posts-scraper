@@ -1,0 +1,17 @@
+{
+    "$schema": "https://apify.com/schemas/v1/output.ide.json",
+    "actorOutputSchemaVersion": 1,
+    "title": "Instagram Scraper Output",
+    "properties": {
+        "posts": {
+            "type": "string",
+            "title": "Scraped Instagram Posts (Dataset)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "summary": {
+            "type": "string",
+            "title": "Per-Account Run Summary (Key-Value Store)",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/keys/SUMMARY"
+        }
+    }
+}

@@ -1,0 +1,293 @@
+{
+    "$schema": "https://apify.com/schemas/v1/dataset.ide.json",
+    "actorSpecification": 1,
+    "fields": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": ["string", "null"],
+                "title": "Post ID",
+                "description": "Unique Instagram media identifier.",
+                "example": "3925170511466021648"
+            },
+            "shortCode": {
+                "type": ["string", "null"],
+                "title": "Short Code",
+                "description": "Alphanumeric code in the Instagram post URL.",
+                "example": "DZ5AciixUMQ"
+            },
+            "url": {
+                "type": ["string", "null"],
+                "title": "Post URL",
+                "description": "Canonical URL of the Instagram post or reel.",
+                "example": "https://www.instagram.com/p/DZ5AciixUMQ/"
+            },
+            "inputUrl": {
+                "type": ["string", "null"],
+                "title": "Source Profile URL",
+                "description": "The Instagram profile URL from which this post was scraped.",
+                "example": "https://www.instagram.com/remaxconexionpy_/"
+            },
+            "timestamp": {
+                "type": ["string", "null"],
+                "title": "Timestamp (UTC ISO)",
+                "description": "Exact UTC ISO-8601 publication timestamp of the post.",
+                "example": "2026-06-22T14:01:05.000Z"
+            },
+            "type": {
+                "type": ["string", "null"],
+                "title": "Post Type",
+                "description": "Media format: Image, Video, or Sidecar (Carousel).",
+                "example": "Sidecar"
+            },
+            "productType": {
+                "type": ["string", "null"],
+                "title": "Product Type",
+                "description": "Instagram product placement (e.g. feed, clips/Reels, igtv).",
+                "example": "clips"
+            },
+            "caption": {
+                "type": ["string", "null"],
+                "title": "Caption",
+                "description": "Full text caption of the post.",
+                "example": "Nueva propiedad en Asunción #remax @remaxconexionpy_"
+            },
+            "alt": {
+                "type": ["string", "null"],
+                "title": "Alt Text / Accessibility Transcript",
+                "description": "Accessibility description or auto-generated text transcript.",
+                "example": "Photo by RE/MAX in Asunción, Paraguay."
+            },
+            "displayUrl": {
+                "type": ["string", "null"],
+                "title": "Display Image URL",
+                "description": "Direct full-resolution cover image or photo URL.",
+                "example": "https://scontent.cdninstagram.com/v/t51.29350-15/example.jpg"
+            },
+            "videoUrl": {
+                "type": ["string", "null"],
+                "title": "Video URL",
+                "description": "Direct full-resolution video stream URL (for Video/Reels).",
+                "example": "https://scontent.cdninstagram.com/v/t50.2886-16/example.mp4"
+            },
+            "videoDuration": {
+                "type": ["number", "null"],
+                "title": "Video Duration (s)",
+                "description": "Duration of the video in seconds.",
+                "example": 29.5
+            },
+            "images": {
+                "type": "array",
+                "title": "Image URLs",
+                "description": "List of direct image URLs in the post.",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "childPosts": {
+                "type": "array",
+                "title": "Carousel Slides (Child Posts)",
+                "description": "Nested slides for Sidecar/Carousel posts with individual media URLs and metadata.",
+                "items": {
+                    "type": "object"
+                }
+            },
+            "likesCount": {
+                "type": ["integer", "null"],
+                "title": "Likes Count",
+                "description": "Public likes count (-1 or null if hidden by author).",
+                "example": 145
+            },
+            "commentsCount": {
+                "type": ["integer", "null"],
+                "title": "Comments Count",
+                "description": "Total number of public comments on the post.",
+                "example": 12
+            },
+            "videoViewCount": {
+                "type": ["integer", "null"],
+                "title": "Video View Count",
+                "description": "Total video views count (for Video/Reels).",
+                "example": 3200
+            },
+            "videoPlayCount": {
+                "type": ["integer", "null"],
+                "title": "Video Play Count",
+                "description": "Total video/reel play count.",
+                "example": 4510
+            },
+            "ownerUsername": {
+                "type": ["string", "null"],
+                "title": "Owner Username",
+                "description": "Canonical Instagram username of the post author.",
+                "example": "remaxconexionpy_"
+            },
+            "ownerFullName": {
+                "type": ["string", "null"],
+                "title": "Owner Full Name",
+                "description": "Display name of the post author.",
+                "example": "RE/MAX Conexión"
+            },
+            "ownerId": {
+                "type": ["string", "null"],
+                "title": "Owner ID",
+                "description": "Instagram account ID of the post author.",
+                "example": "123456789"
+            },
+            "coauthorProducers": {
+                "type": "array",
+                "title": "Coauthors / Collaborators",
+                "description": "List of collaborator accounts on the post.",
+                "items": {
+                    "type": "object"
+                }
+            },
+            "taggedUsers": {
+                "type": "array",
+                "title": "Tagged Users",
+                "description": "Users tagged in the post media.",
+                "items": {
+                    "type": ["object", "string"]
+                }
+            },
+            "hashtags": {
+                "type": "array",
+                "title": "Hashtags",
+                "description": "Hashtags (#) extracted from the caption.",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "mentions": {
+                "type": "array",
+                "title": "Mentions",
+                "description": "User mentions (@) extracted from the caption.",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "locationName": {
+                "type": ["string", "null"],
+                "title": "Location Name",
+                "description": "Tagged geographic location name.",
+                "example": "Asunción, Paraguay"
+            },
+            "locationId": {
+                "type": ["string", "null"],
+                "title": "Location ID",
+                "description": "Instagram location identifier.",
+                "example": "212970049"
+            },
+            "musicInfo": {
+                "type": ["object", "null"],
+                "title": "Music / Audio Info",
+                "description": "Audio track name, artist, audio ID, and whether it is original audio."
+            },
+            "firstComment": {
+                "type": ["string", "null"],
+                "title": "First Comment",
+                "description": "Text of the first comment on the post."
+            },
+            "latestComments": {
+                "type": "array",
+                "title": "Latest Comments",
+                "description": "List of extracted comments with text, author, likes, and timestamp.",
+                "items": {
+                    "type": "object"
+                }
+            },
+            "isPinned": {
+                "type": ["boolean", "null"],
+                "title": "Is Pinned",
+                "description": "Whether the post is pinned to the top of the author's profile grid.",
+                "example": false
+            },
+            "isSponsored": {
+                "type": ["boolean", "null"],
+                "title": "Is Sponsored",
+                "description": "Whether the post is marked as paid partnership / sponsored.",
+                "example": false
+            }
+        },
+        "required": ["url", "shortCode"]
+    },
+    "views": {
+        "overview": {
+            "title": "Instagram Posts Overview",
+            "transformation": {
+                "fields": [
+                    "ownerUsername",
+                    "type",
+                    "shortCode",
+                    "url",
+                    "timestamp",
+                    "likesCount",
+                    "commentsCount",
+                    "videoViewCount",
+                    "videoPlayCount",
+                    "caption",
+                    "locationName",
+                    "hashtags",
+                    "mentions"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "ownerUsername": {
+                        "label": "Account",
+                        "format": "text"
+                    },
+                    "type": {
+                        "label": "Type",
+                        "format": "text"
+                    },
+                    "shortCode": {
+                        "label": "ShortCode",
+                        "format": "text"
+                    },
+                    "url": {
+                        "label": "Post URL",
+                        "format": "link"
+                    },
+                    "timestamp": {
+                        "label": "Published At",
+                        "format": "date"
+                    },
+                    "likesCount": {
+                        "label": "Likes",
+                        "format": "number"
+                    },
+                    "commentsCount": {
+                        "label": "Comments",
+                        "format": "number"
+                    },
+                    "videoViewCount": {
+                        "label": "Video Views",
+                        "format": "number"
+                    },
+                    "videoPlayCount": {
+                        "label": "Video Plays",
+                        "format": "number"
+                    },
+                    "caption": {
+                        "label": "Caption",
+                        "format": "text"
+                    },
+                    "locationName": {
+                        "label": "Location",
+                        "format": "text"
+                    },
+                    "hashtags": {
+                        "label": "Hashtags",
+                        "format": "array"
+                    },
+                    "mentions": {
+                        "label": "Mentions",
+                        "format": "array"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+    "actorSpecification": 1,
+    "name": "instagram-public-posts-scraper",
+    "title": "Instagram Public Profile & Post Scraper (Max 250 Posts/Profile)",
+    "description": "Extracts full public post metadata, metrics, carousels, audio, taxonomy, collaborators, and comments from Instagram profiles (up to 250 recent posts per profile) via Apify Instagram Scraper.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "python-crawlee-beautifulsoup",
+        "generatedBy": "Antigravity with Gemini 4 Argon"
+    },
+    "inputSchema": "./input_schema.json",
+    "outputSchema": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json",
+        "keyValueStore": "./key_value_store_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}
